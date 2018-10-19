@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET["product_id"])):
 $product = BombProductData::getById($_GET["product_id"]);
-$operations = bombOperationData::getAllByProductId($product->id);
+$operations = BombOperationData::getAllByProductId($product->id);
 ?>
 <div class="row">
 	<div class="col-md-12">
