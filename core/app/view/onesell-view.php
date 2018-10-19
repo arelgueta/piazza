@@ -7,7 +7,7 @@
     <li><a href="report/onesell-word.php?id=<?php echo $_GET["id"];?>">Word 2007 (.docx)</a></li>
   </ul>
 </div>
-<h1>Resumen de Venta</h1>
+<h1>Resumen de Venta de Piezas</h1>
 <?php if(isset($_GET["id"]) && $_GET["id"]!=""):?>
 <?php
 $sell = SellData::getById($_GET["id"]);
@@ -56,7 +56,7 @@ $user = $sell->getUser();
 	<thead>
 		<th>Codigo</th>
 		<th>Cantidad</th>
-		<th>Nombre del Producto</th>
+		<th>Nombre de la Pieza</th>
 		<th>Precio Unitario</th>
 		<th>Total</th>
 

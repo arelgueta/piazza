@@ -4,7 +4,7 @@ $clients = PersonData::getClients();
 <section class="content">
 <div class="row">
 	<div class="col-md-12">
-	<h1>Reportes de Ventas</h1>
+	<h1>Reportes de Ventas de Piezas</h1>
 
 						<form>
 						<input type="hidden" name="view" value="sellreports">

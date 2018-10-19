@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-12">
 	<h1>Reabastecer Inventario</h1>
-	<p><b>Buscar producto por nombre o por codigo:</b></p>
+	<p><b>Buscar pieza por nombre o por codigo:</b></p>
 		<form>
 		<div class="row">
 			<div class="col-md-6">

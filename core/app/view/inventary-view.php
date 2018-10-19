@@ -9,7 +9,7 @@
     <li><a href="report/inventary-word.php">Word 2007 (.docx)</a></li>
   </ul>
 </div>
-		<h1><i class="glyphicon glyphicon-stats"></i> Inventario de Productos</h1>
+		<h1><i class="glyphicon glyphicon-stats"></i> Inventario de Piezas</h1>
 		<div class="clearfix"></div>
 
 

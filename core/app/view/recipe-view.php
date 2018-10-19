@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-12">
-	<h1>Venta Piezas</h1>
+	<h1>Crear Receta</h1>
 	<p><b>Buscar pieza por nombre o por codigo:</b></p>
 		<form id="searchp">
 		<div class="row">
@@ -22,7 +22,7 @@ $(document).ready(function(){
 	$("#searchp").on("submit",function(e){
 		e.preventDefault();
 		
-		$.get("./?action=searchproduct",$("#searchp").serialize(),function(data){
+		$.get("./?action=recipesearchproduct",$("#searchp").serialize(),function(data){
 			$("#show_search_results").html(data);
 		});
 		$("#product_code").val("");
@@ -65,7 +65,7 @@ $product = ProductData::getById($error["product_id"]);
 unset($_SESSION["errors"]);
  endif; ?>
 
-
+<!-- ----------------------------------------------------------- -->
 <!--- Carrito de compras :) -->
 <?php if(isset($_SESSION["cart"])):
 $total = 0;
@@ -77,8 +77,6 @@ $total = 0;
 	<th style="width:30px;">Cantidad</th>
 	<th style="width:30px;">Unidad</th>
 	<th>Pieza</th>
-	<th style="width:30px;">Precio Unitario</th>
-	<th style="width:30px;">Precio Total</th>
 	<th ></th>
 </thead>
 <?php foreach($_SESSION["cart"] as $p):
@@ -89,9 +87,7 @@ $product = ProductData::getById($p["product_id"]);
 	<td ><?php echo $p["q"]; ?></td>
 	<td><?php echo $product->unit; ?></td>
 	<td><?php echo $product->name; ?></td>
-	<td><b>$ <?php echo number_format($product->price_out); ?></b></td>
-	<td><b>$ <?php  $pt = $product->price_out*$p["q"]; $total +=$pt; echo number_format($pt); ?></b></td>
-	<td style="width:30px;"><a href="index.php?view=clearcart&product_id=<?php echo $product->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Cancelar</a></td>
+	<td style="width:30px;"><a href="index.php?view=recipeclearcart&product_id=<?php echo $product->id; ?>" class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Cancelar</a></td>
 </tr>
 
 <?php endforeach; ?>

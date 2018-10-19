@@ -13,7 +13,7 @@ if(count($products)>0){
 <table class="table table-bordered table-hover	">
 	<thead>
 		<th></th>
-		<th>Producto</th>
+		<th>Pieza</th>
 		<th>Total</th>
 		<th>Fecha</th>
 		<th></th>

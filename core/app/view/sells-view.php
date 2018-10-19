@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-12">
-		<h1><i class='glyphicon glyphicon-shopping-cart'></i> Lista de Ventas</h1>
+		<h1><i class='glyphicon glyphicon-shopping-cart'></i> Lista de Ventas de Piezas</h1>
 		<div class="clearfix"></div>
 
 
@@ -15,7 +15,7 @@ if(count($products)>0){
 <table class="table table-bordered table-hover	">
 	<thead>
 		<th></th>
-		<th>Producto</th>
+		<th>Pieza</th>
 		<th>Total</th>
 		<th>Fecha</th>
 		<th></th>

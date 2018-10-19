@@ -3,7 +3,7 @@ $categories = CategoryData::getAll();
     ?>
 <div class="row">
 	<div class="col-md-12">
-	<h1>Nuevo Producto</h1>
+	<h1>Nueva Pieza</h1>
 	<br>
 		<form class="form-horizontal" method="post" enctype="multipart/form-data" id="addproduct" action="index.php?view=addproduct" role="form">
 
@@ -38,7 +38,7 @@ $categories = CategoryData::getAll();
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Descripcion</label>
     <div class="col-md-6">
-      <textarea name="description" class="form-control" id="description" placeholder="Descripcion del Producto"></textarea>
+      <textarea name="description" class="form-control" id="description" placeholder="Descripcion de la Pieza"></textarea>
     </div>
   </div>
   <div class="form-group">
@@ -56,14 +56,14 @@ $categories = CategoryData::getAll();
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Unidad*</label>
     <div class="col-md-6">
-      <input type="text" name="unit" required class="form-control" id="unit" placeholder="Unidad del Producto">
+      <input type="text" name="unit" required class="form-control" id="unit" placeholder="Unidad de la Pieza">
     </div>
   </div>
 
   <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Presentacion</label>
     <div class="col-md-6">
-      <input type="text" name="presentation" class="form-control" id="inputEmail1" placeholder="Presentacion del Producto">
+      <input type="text" name="presentation" class="form-control" id="inputEmail1" placeholder="Presentacion de la Pieza">
     </div>
   </div>
   <div class="form-group">
@@ -82,7 +82,7 @@ $categories = CategoryData::getAll();
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <button type="submit" class="btn btn-primary">Agregar Producto</button>
+      <button type="submit" class="btn btn-primary">Agregar Pieza</button>
     </div>
   </div>
 </form>

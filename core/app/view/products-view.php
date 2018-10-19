@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-12">
 <div class="btn-group  pull-right">
-	<a href="index.php?view=newproduct" class="btn btn-default">Agregar Producto</a>
+	<a href="index.php?view=newproduct" class="btn btn-default">Agregar Pieza</a>
 <div class="btn-group pull-right">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
@@ -11,7 +11,7 @@
   </ul>
 </div>
 </div>
-		<h1>Lista de Productos</h1>
+		<h1>Lista de Piezas</h1>
 		<div class="clearfix"></div>
 
 
