@@ -5,7 +5,7 @@
 		<form id="searchp">
 		<div class="row">
 			<div class="col-md-6">
-				<input type="hidden" name="view" value="sell">
+				<input type="hidden" name="view" value="recipesell">
 				<input type="text" id="product_code" name="product" class="form-control">
 			</div>
 			<div class="col-md-3">
@@ -92,23 +92,25 @@ $product = ProductData::getById($p["product_id"]);
 
 <?php endforeach; ?>
 </table>
-<form method="post" class="form-horizontal" id="processsell" action="index.php?view=processsell">
+<form method="post" class="form-horizontal" id="processsell" action="index.php?view=recipeprocesssell">
 <h2>Resumen</h2>
 <div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Cliente</label>
+    <label for="inputEmail1" class="col-lg-2 control-label">Producto</label>
     <div class="col-lg-10">
     <?php 
-$clients = PersonData::getClients();
+//$clients = PersonData::getClients();
+$bomb = BombProductData::getAll();
     ?>
-    <select name="client_id" class="form-control">
+    <select name="id" class="form-control">
     <option value="">-- NINGUNO --</option>
-    <?php foreach($clients as $client):?>
-    	<option value="<?php echo $client->id;?>"><?php echo $client->name." ".$client->lastname;?></option>
+    <?php foreach($bomb as $bomb):?>
+    	<option value="<?php echo $bomb->id;?>"><?php echo $bomb->name." ".$bomb->barcode;?></option>
     <?php endforeach;?>
     	</select>
     </div>
   </div>
-<div class="form-group">
+
+<!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Descuento</label>
     <div class="col-lg-10">
       <input type="text" name="discount" class="form-control" required value="0" id="discount" placeholder="Descuento">
@@ -124,7 +126,7 @@ $clients = PersonData::getClients();
 
   <div class="row">
 <div class="col-md-6 col-md-offset-6">
-<table class="table table-bordered">
+ <table class="table table-bordered">
 <tr>
 	<td><p>Subtotal</p></td>
 	<td><p><b>$ <?php echo number_format($total*.84); ?></b></p></td>
@@ -138,8 +140,9 @@ $clients = PersonData::getClients();
 	<td><p><b>$ <?php echo number_format($total); ?></b></p></td>
 </tr>
 
-</table>
-  <div class="form-group">
+</table> 
+-->
+<div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <div class="checkbox">
         <label>
@@ -148,31 +151,32 @@ $clients = PersonData::getClients();
       </div>
     </div>
   </div>
+
 <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
       <div class="checkbox">
         <label>
 		<a href="index.php?view=clearcart" class="btn btn-lg btn-danger"><i class="glyphicon glyphicon-remove"></i> Cancelar</a>
-        <button class="btn btn-lg btn-primary"><i class="glyphicon glyphicon-usd"></i><i class="glyphicon glyphicon-usd"></i> Finalizar Venta</button>
+        <button class="btn btn-lg btn-primary"><i class="glyphicon glyphicon-wrench"></i> Cargar Receta</button>
         </label>
       </div>
     </div>
   </div>
 </form>
 <script>
-	$("#processsell").submit(function(e){
-		discount = $("#discount").val();
-		money = $("#money").val();
-		if(money<(<?php echo $total;?>-discount)){
-			alert("No se puede efectuar la operacion");
-			e.preventDefault();
-		}else{
-			if(discount==""){ discount=0;}
-			go = confirm("Cambio: $"+(money-(<?php echo $total;?>-discount ) ) );
-			if(go){}
-				else{e.preventDefault();}
-		}
-	});
+//	$("#processsell").submit(function(e){
+//		discount = $("#discount").val();
+//		money = $("#money").val();
+//		if(money<(<?php echo $total;?>-discount)){
+//			alert("No se puede efectuar la operacion");
+//			e.preventDefault();
+//		}else{
+//			if(discount==""){ discount=0;}
+//			go = confirm("Cambio: $"+(money-(<?php echo $total;?>-discount ) ) );
+//			if(go){}
+//				else{e.preventDefault();}
+//		}
+//	});
 </script>
 </div>
 </div>

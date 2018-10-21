@@ -1,6 +1,6 @@
 <?php
 class BombProductData {
-	public static $tablename = "bomb";
+	public static $tablename = "product";
 
 	public function BombProductData(){
 		$this->name = "";

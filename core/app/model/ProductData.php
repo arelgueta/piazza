@@ -1,6 +1,6 @@
 <?php
 class ProductData {
-	public static $tablename = "product";
+	public static $tablename = "piece";
 
 	public function ProductData(){
 		$this->name = "";

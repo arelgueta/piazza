@@ -60,12 +60,12 @@ $q = OperationData::getQYesF($_POST["product_id"]);
 
 
 $can = true;
-if($_POST["q"]<=$q){
-}else{
-	$error = array("product_id"=>$_POST["product_id"],"message"=>"No hay suficiente cantidad de producto en inventario.");
-	$errors[count($errors)] = $error;
-	$can=false;
-}
+//if($_POST["q"]<=$q){
+//}else{
+	//$error = array("product_id"=>$_POST["product_id"],"message"=>"No hay suficiente cantidad de producto en inventario.");
+	//$errors[count($errors)] = $error;
+	//$can=false;
+//}
 
 if($can==false){
 $_SESSION["errors"] = $errors;
